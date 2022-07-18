@@ -1,1 +1,26 @@
-﻿
+﻿@{
+	ViewData["Title"] = "Add a new pizza";
+}
+
+<div class="container">
+	<h1 class="mb-3">Aggiungi una nuova pizza</h1>
+	<form>
+		<div class="mb-3">
+			<label for="pizza-name" class="form-label">Name</label>
+			<input type="text" class="form-control" id="pizza-name">
+		</div>
+		<div class="mb-3">
+			<label for="pizza-description" class="form-label">Descrizione</label>
+			<textarea id="pizza-description" class="form-control"></textarea>
+		</div>
+		<div class="mb-3">
+			<label for="img-path" class="form-label">Image Path</label>
+			<input type="text" class="form-control" id="img-path">
+		</div>
+		<div class="mb-3">
+			<label for="price" class="form-label">Prezzo</label>
+			<input type="text" class="form-control" id="price">
+		</div>
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+</div>
