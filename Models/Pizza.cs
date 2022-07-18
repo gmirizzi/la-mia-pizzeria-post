@@ -6,6 +6,11 @@ namespace la_mia_pizzeria_static.Models
     [Table("pizzas")]
     public class Pizza
     {
+        public Pizza()
+        {
+    
+        }
+
         [Key]
         public int PizzaId { get; set; }
         [Required]

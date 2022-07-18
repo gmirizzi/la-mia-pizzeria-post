@@ -2,24 +2,27 @@
 	ViewData["Title"] = "Add a new pizza";
 }
 
+@model Pizza
+
 <div class="container">
 	<h1 class="mb-3">Aggiungi una nuova pizza</h1>
-	<form>
+	<form asp-controller="Pizze" asp-action="Create" method="post">
+		@Html.AntiForgeryToken()
 		<div class="mb-3">
 			<label for="pizza-name" class="form-label">Name</label>
-			<input type="text" class="form-control" id="pizza-name">
+			<input type="text" asp-for="Name" class="form-control" id="pizza-name">
 		</div>
 		<div class="mb-3">
 			<label for="pizza-description" class="form-label">Descrizione</label>
-			<textarea id="pizza-description" class="form-control"></textarea>
+			<textarea id="pizza-description" class="form-control" asp-for="Description"></textarea>
 		</div>
 		<div class="mb-3">
 			<label for="img-path" class="form-label">Image Path</label>
-			<input type="text" class="form-control" id="img-path">
+			<input type="url" class="form-control" id="img-path" asp-for="ImgPath">
 		</div>
 		<div class="mb-3">
 			<label for="price" class="form-label">Prezzo</label>
-			<input type="text" class="form-control" id="price">
+			<input type="text" class="form-control" id="price" asp-for="Price">
 		</div>
 		<button type="submit" class="btn btn-primary">Submit</button>
 	</form>
